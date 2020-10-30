@@ -57,3 +57,5 @@ group :development do
 end
 	
 gem 'devise'
+gem 'active_hash'
+gem 'factory_bot_rails'

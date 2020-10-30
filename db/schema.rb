@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 2020_10_29_085540) do
     t.string "nickname", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
-    t.string "fan_history", null: false
-    t.string "favorite_player", null: false
+    t.integer "fan_history_id", null: false
+    t.integer "favorite_player_id", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
