@@ -6,8 +6,48 @@ body {
 }
 
 header {
-  height: 120px;
+  height: 150px;
+  border-bottom:1px solid #fff;
+  background-color:yellow;
 }
+
+.header-contents {
+  width: 90%;
+  margin: 0 auto;
+  height: 100px;
+  display:inline-block ;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-logo {
+  width: 80%;
+  display: flex; 
+  
+}
+
+
+.header-title {
+  
+ 
+  
+}
+
+
+
+
+
+.header-container {
+  
+}
+
+.header-container-contents {
+  
+}
+
+
+
+
 
 footer {
   height: 100px;
