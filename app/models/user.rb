@@ -18,12 +18,11 @@ class User < ApplicationRecord
   validates :fan_history_id, numericality: { other_than: 1 }
   validates :favorite_player_id, numericality: { other_than: 1 }
   
-  #def self.guest
-    #find_or_create_by!(email: 'guestlogin@example.com') do |user|
-     # user.nickname = SecureRandom.urlsafe_base64
-      #user.password = SecureRandom.urlsafe_base64
-      #user.fan_history_id = SecureRandom.urlsafe_base64
-      #user.favorite_player_id = SecureRandom.urlsafe_base64
-   # end
-  #end
+  def self.guest
+    find_or_create_by!(nickname: 'ゲスト', email: 'guestuser@example.com') do |user|
+      user.password = Faker::Internet.password(min_length: 6)
+      user.fan_history_id = 2
+      user.favorite_player_id = 2
+    end
+  end
 end
