@@ -20,3 +20,33 @@
 body {
   margin: 0 auto;
 }
+
+.account-page__login {
+  border-bottom: solid 3px yellowgreen;
+  position: relative;
+  font-size: 50px;
+  color: black;
+  margin: auto;
+}
+
+.account-page__login:after {
+  position: absolute;
+  content: " ";
+  display: block;
+  border-bottom: solid 3px #ffc778;
+  bottom: -3px;
+  width: 30%;
+}
+
+.btn {
+  width: 100px;
+  background:yellow;
+  text-align: center;
+  border:1px solid yellowgreen;
+  bottom: 32px;
+  right: 24px;
+  padding: 15px 0;
+  margin-bottom:20px;
+  color:black;
+}
+

@@ -1,14 +1,10 @@
 <%= render "shared/header" %>
-<div class='account-page' id='account-page'>
-  <div class='account-page__inner clearfix'>
-    <div class='account-page__inner--left account-page__header'>
-      <h2 class="account-page__login">Log in</h2>
-      <%= render "devise/shared/links"%>
-      <%= link_to "前に戻る", :back, class: 'btn'%>
+  <h1 class="account-page__login">ログインしてください</h2>
+  <%= render "devise/shared/links"%>
+  <%= link_to "トップページに戻る", :back, class: 'btn'%>
 
     </div>
     <div class='account-page__inner--right user-form'>
-    <%# ログイン時のエラーメッセージ  %>
       <% if flash[:notice] || flash[:alert]%>
         <div id="error_explanation">
           <%= flash[:notice] %>
@@ -44,7 +40,5 @@
           </div>
         </div>
       <% end %>
-    </div>
-  </div>
-</div>
+
 <%= render "shared/footer" %>
