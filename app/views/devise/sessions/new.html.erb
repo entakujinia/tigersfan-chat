@@ -3,42 +3,39 @@
   <%= render "devise/shared/links"%>
   <%= link_to "トップページに戻る", :back, class: 'btn'%>
 
-    </div>
-    <div class='account-page__inner--right user-form'>
-      <% if flash[:notice] || flash[:alert]%>
-        <div id="error_explanation">
-          <%= flash[:notice] %>
-          <%= flash[:alert] %>
+  <div class='account-page__inner--right user-form'>
+    <% if flash[:notice] || flash[:alert]%>
+      <div id="error_explanation">
+        <%= flash[:notice] %>
+        <%= flash[:alert] %>
+  </div>
+    <% end %>
+    <%= form_with model: resource, as: resource_name, url: session_path(resource_name), local: true do |f|%>
+      <div class='field'>
+         <div class='field-label'>
+           <%= f.label :メールアドレス%>
+         </div>
+      </div>
+       <div class='field-input'>
+           <%= f.email_field :email, autofocus: true%>
+       </div>
+      <div class='field'>
+        <div class='field-label'>
+             <%= f.label :パスワード%>
+            <i>(英数字6文字以上で記入してください)</i>
         </div>
-      <% end %>
-      <%= form_with model: resource, as: resource_name, url: session_path(resource_name), local: true do |f|%>
-        <div class='field'>
-          <div class='field-label'>
-            <%= f.label :email%>
-          </div>
-          <div class='field-input'>
-            <%= f.email_field :email, autofocus: true%>
-          </div>
-          <div class='field'>
-            <div class='field-label'>
-              <%= f.label :password%>
-              <i>(英数字6文字以上)</i>
-            </div>
-            <div class='field-input'>
+      </div>
+        <div class='field-input'>
               <%= f.password_field :password, autocomplete: "off"%>
-            </div>
-          </div>
-          <div class='field-submit'>
+        </div>
+        <div class='field-submit'>
             <div class='actions'>
               <%= f.submit "ログイン", class: 'btn'%>
             </div>
+        </div>
           <div class='actions'>
               <%= link_to "ゲストログインはこちら", users_guest_sign_in_path, method: :post, class: 'btn'%>
-            </div>
-           
-             
-          </div>
-        </div>
+          </div>      
       <% end %>
-
+     
 <%= render "shared/footer" %>

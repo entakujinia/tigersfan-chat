@@ -40,13 +40,15 @@ body {
 
 .btn {
   width: 100px;
-  background:yellow;
+  background:black;
   text-align: center;
-  border:1px solid yellowgreen;
+  border:1px solid yellow;
   bottom: 32px;
   right: 24px;
   padding: 15px 0;
   margin-bottom:20px;
-  color:black;
+  color:yellow;
 }
+
+
 
