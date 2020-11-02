@@ -8,7 +8,7 @@ body {
 header {
   height: 150px;
   border-bottom:1px solid #fff;
-  background-color:yellow;
+  background-color:rgb(182, 182, 26);
 }
 
 .header-contents {
@@ -51,4 +51,18 @@ header {
 
 footer {
   height: 100px;
+  width: 100%;
+  background-color:rgb(182, 182, 26);
+  position: absolute;
+  bottom: 0;
 }
+
+.postscript {
+  position: relative;
+  color:gray;
+  font-size: 15px;
+  text-align: center;
+  align-items: center;
+  padding: 40px;
+}
+
