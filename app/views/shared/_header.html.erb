@@ -8,15 +8,22 @@
      <div class="header-container">
       <div class="header-container-contents">
         <ul>
-          <% if user_signed_in? %>
-          <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout" %></li>
-          <li><%= link_to current_user.nickname, "#", class: "user-nickname"%></li>
-          <% else %>
-          <li><%= link_to "ログイン", new_user_session_path, class: "login" %></li>
-              <%= link_to users_guest_sign_in_path, method: :post do %>
-              ゲスト<br class="guest-btn">ログイン
-            <% end %>
+          <% if user_signed_in? %>   
+          <div class="header-list ">     
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
           </div>
+          <div class="header-list ">
+          <%= link_to current_user.nickname, "#" %>
+          </div>
+          <% else %>
+          <div class="header-list ">
+          <%= link_to "ログイン", new_user_session_path %>
+          </div>
+          <div class="header-list ">
+          <%= link_to users_guest_sign_in_path, method: :post do %> 
+             ゲスト<br class="br">ログイン
+              <% end %>
+          </div>    
           <% end %>
         </ul>          
       </div>
