@@ -1,9 +1,12 @@
 // Place all the styles related to the places controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/* リセットCSS */
 body {
   margin: 0;
 }
+
+
 
 header {
   height: 150px;
@@ -11,48 +14,17 @@ header {
   background-color:rgb(182, 182, 26);
 }
 
-.header-contents {
-  width: 90%;
-  margin: 0 auto;
-  height: 100px;
-  display:inline-block ;
-  display: flex;
-  justify-content: space-between;
+.main {
+  position:relative;
+  height: calc(100vh-250px);
+  box-sizing: border-box;
 }
-
-.header-logo {
-  width: 80%;
-  display: flex; 
-  
-}
-
-
-.header-title {
-  
- 
-  
-}
-
-
-
-
-
-.header-container {
-  
-}
-
-.header-container-contents {
-  
-}
-
-
-
-
 
 footer {
   height: 100px;
   width: 100%;
   background-color:rgb(182, 182, 26);
+  margin-top: auto;
   position: absolute;
   bottom: 0;
 }
@@ -65,4 +37,3 @@ footer {
   align-items: center;
   padding: 40px;
 }
-
