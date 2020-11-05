@@ -12,9 +12,6 @@ class User < ApplicationRecord
   # has_many :rooms, through: room_users
   # has_many :messages
 
-  has_one_attached :image, dependent: :destroy
-
-
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :fan_history
   belongs_to_active_hash :favorite_player
