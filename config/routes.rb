@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   end
 
   root to: "places#index"
-  resources :users
+  resources :places
 end 
