@@ -1,40 +1,51 @@
 <%= render "shared/header" %>
- <div class="main">
-  <h1 class="account-page__login">新規登録</h1>
+ <div class="page-signin">
+  <div class="left-main">
+  <h1 class="account-page__signin">新規登録</h1>
+  <%= link_to "ログインページに戻る", new_user_session_path, class: 'logbackbtn'%>
+  </div>
  <%= form_with model: @user, url:user_registration_path, local: true do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
-  
-  <div class="field">
+
+ <div class="right-main">
+   <div class="field">
     <%= f.label :ニックネーム %><br />
     <%= f.text_field :nickname, maxlength:"10", autofocus: true, autocomplete: "nickname" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :メールアドレス %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+   </div>
 
    <div class="field">
+    <%= f.label :メールアドレス %><br />
+    <%= f.text_field :email, autofocus: true, autocomplete: "email" %>
+   </div>
+  
+    <div class="field">
      <%= f.label :パスワード %>
       <% if @minimum_password_length %>
-         <em>(<%= @minimum_password_length %>文字以上英数字で記入してください)</em>
+         <em>(<%= @minimum_password_length %>文字以上)</em>
       <% end %><br />
-     <%= f.password_field :password, autocomplete: "off" %>
-    </div>
-
-    <div class="field">
+     <%= f.text_field :password, autocomplete: "off" %>
+     </div>
+ 
+     <div class="field">
       <%= f.label :パスワード確認用 %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
-    </div>
-   <div class='field-input'>
-    <%= f.collection_select(:fan_history_id, FanHistory.all, :id, :name, {}, {class:"fan_history-select"}) %>
-    <%= f.collection_select(:favorite_player_id, FavoritePlayer.all, :id, :name, {}, {class:"favorite_player-select"}) %>
+      <%= f.text_field :password_confirmation, autocomplete: "off" %>
+     </div>
    </div>
-  <div class="actions">
-    <%= f.submit "新規登録", class: 'btn' %>
+
+   <div class='field'>
+    <div class="pulldown">
+     <div class='pull-first'>ファン歴<br />
+    <%= f.collection_select(:fan_history_id, FanHistory.all, :id, :name, {}, {class:"fan_history-select"}) %>
+     </div>   
+     <div class='pull-second'> 好きな選手<br />
+    <%= f.collection_select(:favorite_player_id, FavoritePlayer.all, :id, :name, {}, {class:"favorite_player-select"}) %>
+     </div>
+    </div>
+   </div>
+  <%= f.submit "新規登録", class: 'newbtn' %>  
+  <% end %> 
   </div>
-<% end %>
- </div>
+</div>
 
 <%= render "shared/footer" %>
 

@@ -1,3 +1,48 @@
 // Place all the styles related to the registrations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// 左側のViewについて
+.page-signin {
+  display: flex;
+  justify-content: space-between;
+}
+
+.account-page__signin {
+  font-size:60px;
+  padding:50px;
+  color: goldenrod;
+}
+
+ .logbackbtn {
+   background-color: black;
+   background:gold;
+   text-align: center;
+   border:1px solid yellow;
+   padding:30px 10px;
+   color:black;
+  margin: 70px;
+ }
+
+// 右側のViewについて
+ .right-main {
+   margin-right:350px;
+ }
+
+ .page-signin
+ .field 
+ {
+   padding: 20px 0;
+ }
+
+.pulldown {
+ display: flex;
+}
+
+ .newbtn {
+  background-color: black;
+  background:gold;
+  border:1px solid yellow;
+  padding: 20px 70px;
+  
+ }
