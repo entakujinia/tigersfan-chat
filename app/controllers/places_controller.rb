@@ -17,7 +17,7 @@ class PlacesController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.all
   end
 
   def edit

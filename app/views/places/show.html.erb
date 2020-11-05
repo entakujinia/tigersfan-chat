@@ -1,9 +1,10 @@
 <%= render "shared/header" %> 
 <% if user_signed_in? %>
-  <% if current_user.id == @user.id %>
+  <% if current_user == @user%>
  <div class= "user-edit">
   <%= link_to "プロフィールを編集する",edit_place_path(id: current_user.id), method: :get%>
   <% end %>
 <% end %>
  </div>
+ gdgs
 <%= render "shared/footer" %> 
