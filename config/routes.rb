@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'messages/new'
   devise_for :users, controllers: {
     registrations: 'users/registrations'
   }
@@ -9,4 +10,6 @@ Rails.application.routes.draw do
 
   root to: "places#index"
   resources :users
+
+  resources :messeages, only: [:new, :create]
 end 
