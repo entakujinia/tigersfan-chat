@@ -13,7 +13,7 @@
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
           </div>
           <div class="header-list ">
-          <%= link_to current_user.nickname, user_path(@user), method: :get %>
+          <%= link_to current_user.nickname, place_path(@user), method: :get %>
           </div>
           <% else %>
           <div class="header-list ">
