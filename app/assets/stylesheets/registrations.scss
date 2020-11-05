@@ -2,34 +2,31 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// 左側のViewについて
-.page-signin {
+// 左側のViewについて(session画面にも使用）
+.page-login {
   display: flex;
   justify-content: space-between;
 }
 
-.account-page__signin {
+.account-page__login {
   font-size:60px;
   padding:50px;
   color: goldenrod;
 }
 
- .logbackbtn {
-   background-color: black;
-   background:gold;
-   text-align: center;
-   border:1px solid yellow;
-   padding:30px 10px;
-   color:black;
-  margin: 70px;
- }
+ 
 
 // 右側のViewについて
  .right-main {
-   margin-right:350px;
+   margin-right:200px;
  }
 
- .page-signin
+ .field {
+  font-size: 20px;
+  padding: 30px;
+}
+
+ .page-login
  .field 
  {
    padding: 20px 0;
