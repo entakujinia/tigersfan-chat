@@ -11,5 +11,5 @@ Rails.application.routes.draw do
   root to: "places#index"
   resources :users
 
-  resources :messeages, only: [:new, :create]
+  resources :messages, only: [:new, :create]
 end 
