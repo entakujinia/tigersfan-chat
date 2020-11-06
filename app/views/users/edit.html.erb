@@ -28,7 +28,6 @@
         </div>
      </div>
 
-    <div class="pull-input">
      <div class='field'>
       <div class="field-label">
        <%= f.label :ファン歴%>
@@ -46,9 +45,7 @@
       <%= f.collection_select(:favorite_player_id, FavoritePlayer.all, :id, :name, {}, {class:"favorite_player-select"}) %>
      </div>   
      </div>
-    </div>
-
-  
+ 
      <div class='field'>
       <div class='field-submit'>
         <div class='actions'>
