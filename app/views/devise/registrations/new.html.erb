@@ -4,8 +4,8 @@
   <h1 class="account-page__login">新規登録</h1>
   <%= link_to "ログインページに戻る", new_user_session_path, class: 'btn'%>
   </div>
- <%= form_with model: @user, url:user_registration_path, local: true do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
+ <%= form_with model: @user, url:user_registration_path, local: true do |f| %>
 
  <div class="right-main">
    <div class="field">

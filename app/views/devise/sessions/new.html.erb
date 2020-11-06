@@ -7,7 +7,6 @@
     <%= render "devise/shared/links" %>
     </div>
   </div>
-
   <%= form_with model: resource, as: resource_name, url: session_path(resource_name), local: true do |f|%>
     <%= render "devise/shared/error_messages", resource: resource %>
 
@@ -30,4 +29,8 @@
      <% end %>
   </div>
 </div>
+ <div class='login-flash-message'>
+      <%= flash[:notice] %>
+      <%= flash[:alert] %>
+  </div>
 <%= render "shared/footer" %>
