@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   end
 
   root to: "places#index"
-  resources :users
+  resources :users, only: [:edit, :update]
   
   get 'messages/new'
   resources :messages, only: [:new, :create]
