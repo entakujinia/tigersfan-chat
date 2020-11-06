@@ -1,13 +1,15 @@
  <%= render "shared/header" %>
  <div class="page-login">
   <div class="left-main">
-    <h1 class="account-page__login">アカウント編集</h1> 
+    <h1 class="account-page__login">アカウント編集</h1>  
+     <div class="edit-btn">
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'%>
       <%= link_to "トップページに戻る", :back, class: 'btn'%>
+     </div>
   </div>
   
   <%= form_with model: current_user, local: true do |f|%>
-     <%= render 'layouts/error_messages', model: form.object %> 
+     <%# <%= render 'layouts/error_messages', model: form.object %>  
    <div class="right-main">
      <div class="edit-main">
       <div class="field">
