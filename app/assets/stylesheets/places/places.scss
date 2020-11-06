@@ -100,11 +100,8 @@ header {
 
 footer {
   height: 100px;
-  width: 100%;
-  background-color:black;
-  margin-top: auto;
-  position: absolute;
-  bottom: 0;
+  background-color: black;
+  border-top:1px solid #fff;
 }
 
 .postscript {
@@ -114,4 +111,49 @@ footer {
   text-align: center;
   align-items: center;
   padding: 40px;
+}
+
+
+@media (max-width: 1024px) {
+  .header-logo {
+    width:60%;
+  }
+  .header-title {
+    font-size: 25px;
+  }
+  .header-container {
+    width:40%;
+  }
+  .header-list > a {
+    font-size:15px;
+  }
+  .br {
+    display:inline;
+  }
+}
+
+@media (max-width: 599px) {
+  .header-title {
+    font-size: 15px;
+    top:30%;
+  }
+  .header-logo {
+    width:40%;
+  }
+  .header-container {
+    width: 60%;
+  }
+  .header-container-contents {
+    display: inline-block;
+    width: 100%;
+  }
+  .header-container-contents > ul {
+    width:100%;
+  }
+  .header-list > a {
+    font-size:15px;
+  }
+  .br {
+    display:inline;
+  }
 }

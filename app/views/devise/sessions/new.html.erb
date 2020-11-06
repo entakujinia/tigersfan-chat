@@ -1,36 +1,47 @@
 <%= render "shared/header" %>
- <div class="page-login">
-  <div class="left-main">
-    <div class ="log-leftbtn" >
-  <h1 class="account-page__login">ログイン</h1> 
-   <%= link_to "トップページに戻る", :back, class: 'btn'%>  
-    <%= render "devise/shared/links" %>
+<div class='account-page' id='account-page'>
+  <div class='account-page__inner clearfix'>
+    <div class='account-page__inner--left account-page__header'>
+      <h2 class="account-page__login">Log in</h2>
+      <%= render "devise/shared/links"%>
+      <%= link_to "前に戻る", :back, class: 'btn'%>
+
+    </div>
+    <div class='account-page__inner--right user-form'>
+      <% if flash[:notice] || flash[:alert]%>
+        <div id="error_explanation">
+          <%= flash[:notice] %>
+          <%= flash[:alert] %>
+        </div>
+      <% end %>
+      <%= form_with model: resource, as: resource_name, url: session_path(resource_name), local: true do |f|%>
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label :メールアドレス%>
+          </div>
+          <div class='field-input'>
+            <%= f.email_field :email, autofocus: true%>
+          </div>
+          <div class='field'>
+            <div class='field-label'>
+              <%= f.label :パスワード%>
+              <i>(英数字6文字以上)</i>
+            </div>
+            <div class='field-input'>
+              <%= f.password_field :password, autocomplete: "off"%>
+            </div>
+          </div>
+          <div class='field-submit'>
+            <div class='actions'>
+              <%= f.submit "ログイン", class: 'btn'%>
+            </div>
+            <div class='actions'>
+              <%= link_to "ゲストログインはこちら", users_guest_sign_in_path, method: :post, class: 'btn'%>
+            </div>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
-  <%= form_with model: resource, as: resource_name, url: session_path(resource_name), local: true do |f|%>
-    <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="right-main">
-      <div class='log-field'>
-         <%= f.label :メールアドレス%><br />
-          <%= f.text_field :email, autofocus: true%>
-      </div>
-
-      <div class='log-field'>
-          <%= f.label :パスワード%>
-          <i>(6文字以上)</i><br />
-          <%= f.password_field :password, autocomplete: "off"%>
-      </div>  
-     
-       <div class ="log-rightbtn" >
-        <%= f.submit "ログインはこちら", class: 'btn'%>
-        <%= link_to "ゲストログインはこちら", users_guest_sign_in_path, method: :post, class: 'btn'%> 
-       </div>
-     <% end %>
-  </div>
 </div>
- <div class='login-flash-message'>
-      <%= flash[:notice] %>
-      <%= flash[:alert] %>
-  </div>
-<%= render "shared/footer" %>
+<%= render "shared/footer" %> 
