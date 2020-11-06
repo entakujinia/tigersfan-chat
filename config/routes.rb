@@ -9,7 +9,9 @@ Rails.application.routes.draw do
 
   root to: "places#index"
   resources :users, only: [:edit, :update]
+  resources :rooms, only: [:new, :create]
   
   get 'messages/new'
   resources :messages, only: [:new, :create]
+
 end 
