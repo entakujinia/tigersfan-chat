@@ -1,38 +1,40 @@
  <%= render "shared/header" %>
  <div class="page-login">
   <div class="left-main">
-    <h1 class="account-page__login">アカウントの編集</h1> 
+    <h1 class="account-page__login">アカウント編集</h1> 
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'%>
       <%= link_to "トップページに戻る", :back, class: 'btn'%>
   </div>
   
   <%= form_with model: current_user, local: true do |f|%>
-  
+     <%= render 'layouts/error_messages', model: form.object %> 
    <div class="right-main">
-    <div class="field">
-    <%= f.label :ニックネーム %><br />
-    <%= f.text_field :nickname, maxlength:"10", autofocus: true, autocomplete: "nickname" %>
-   </div>
+     <div class="edit-main">
+      <div class="field">
+      <%= f.label :ニックネーム %><br />
+      <%= f.text_field :nickname, maxlength:"10", autofocus: true, autocomplete: "nickname" %>
+      </div>
 
-   <div class="field">
-    <%= f.label :メールアドレス %><br />
-    <%= f.text_field :email, autofocus: true, autocomplete: "email" %>
-   </div>
+      <div class="field">
+      <%= f.label :メールアドレス %><br />
+      <%= f.text_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
 
-   <div class='field'>
-    <div class="pulldown">
-     <div class='pull-first'>ファン歴<br />
-    <%= f.collection_select(:fan_history_id, FanHistory.all, :id, :name, {}, {class:"fan_history-select"}) %>
-     </div>   
-     <div class='pull-second'> 好きな選手<br />
-    <%= f.collection_select(:favorite_player_id, FavoritePlayer.all, :id, :name, {}, {class:"favorite_player-select"}) %>
-     </div>
+      <div class='field'>
+       <div class="pulldown">
+        <div class='pull-first'>ファン歴<br />
+       <%= f.collection_select(:fan_history_id, FanHistory.all, :id, :name, {}, {class:"fan_history-select"}) %>
+        </div>   
+        <div class='pull-second'> 好きな選手<br />
+       <%= f.collection_select(:favorite_player_id, FavoritePlayer.all, :id, :name, {}, {class:"favorite_player-select"}) %>
+        </div>
+       </div>
+      </div>      
+     <%= f.submit "アカウント更新", class: 'newbtn' %> <br />     
+      <div class="account-delete" >
+     <%= link_to "アカウント削除", user_registration_path, method: :delete, class: 'newbtn', data: {confirm: "本当に削除してもよろしいですか？"}%>
+      </div>
     </div>
-   </div>
-  <%= f.submit "情報更新", class: 'newbtn' %>  
   <% end %> 
-  </div>
-</div>
-  </div>
 </div>
 <%= render "shared/footer" %> 

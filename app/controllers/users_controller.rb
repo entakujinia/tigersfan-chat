@@ -2,15 +2,23 @@ class UsersController < ApplicationController
 
   def edit
     @user =User.all
+
   end
 
   def update 
+    @user = User.find(params[:id])
     if current_user.update(user_params)
       redirect_to root_path
     else
       render :edit
     end
   end
+
+  def destroy
+    user = User.find(params[:id])
+    user.destroy
+  end
+
 
   private
 
