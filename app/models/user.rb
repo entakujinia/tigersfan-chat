@@ -8,7 +8,7 @@ class User < ApplicationRecord
   validates :fan_history,     presence: true
   validates :favorite_player, presence: true
 
-  # has_many :room_users
+  #has_many :room_users
   # has_many :rooms, through: room_users
   # has_many :messages
 

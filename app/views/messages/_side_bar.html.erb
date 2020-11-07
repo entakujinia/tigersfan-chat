@@ -1,21 +1,16 @@
 <div class="side-bar-header">
   <div class="header-name">
-    <a href="#">Taku</a>
+    <a href="#"><%= current_user.nickname %></a>
   </div>
-  <div class="create-room">
-    <a href="#">チャットを作成する</a>
-  </div>
+   <div class="create-room">
+    <%= link_to "チャットを作成する", new_room_path, method: :get %>
+   </div>
 </div>
 
 <div class="rooms">
- <div class="room">
-    <div class="room-name">
-      <a href="#">chatroom1</a>
-    </div>
- </div>
-  <div class="room">
-    <div class="room-name">
-      <a href="#">chatroom2</a>
-    </div>
-  </div>
+    <div class="room">
+      <div class="room-name">
+        <a href="#"><%= @room.name %></a>
+      </div>
+    </div> 
 </div>
