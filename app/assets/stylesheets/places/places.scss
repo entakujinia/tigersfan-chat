@@ -99,9 +99,8 @@ header {
 .main-contents-left {
   height: 600px;
   width:55%;
-  background-color: gold;
+  background-color:silver;
   position: relative;
-
 }
 .images {
   display: flex;
@@ -111,29 +110,24 @@ header {
   width: 419px;
   height: 419px;
 }
-
-.main-content-right-lower {
+.main-content-left-lower {
+  display: flex;
   
-} 
-.main-content-right-lower .btn {
-
 }
-
-
+.chatbtn {
+  letter-spacing: 10px;
+  justify-content: space-around;
+  background-color: gold;
+  text-decoration: none;
+  padding: 30px;
+  color: aliceblue;
+  
+}
 // メインビューの右部分
 .main-contents-right{
   width: 45%;
-  background-color:wheat;
-  
+  background-color:wheat; 
 }
-
-.bottom-contents .btn {
- padding: 20px;
- font-size: 20px;
- 
-}
-
-
 // フッター部分について
 footer {
   height: 100px;
@@ -174,6 +168,12 @@ footer {
   .images {
     display: block;
   }
+  .chatbtn {
+    background-color: gold;
+    text-decoration: none;
+    padding: 10px;
+    color: aliceblue;
+  }
 }
 
 @media (max-width: 599px) {
@@ -206,5 +206,21 @@ footer {
   .image {
     height: 200px;
     width: 250px;
+  }
+  .main-content-left-lower-title {
+    margin: 50px;
+  }
+  .main-content-left-lower .btn {
+    margin-bottom: 280px;
+    width: 60%;
+    letter-spacing: 5px;
+    justify-content: space-around;
+  }
+  .chatbtn {
+    background-color: gold;
+    text-decoration: none;
+    padding: 2px;
+    color: aliceblue;
+    
   }
 }
