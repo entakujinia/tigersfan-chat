@@ -120,8 +120,14 @@ header {
   background-color: gold;
   text-decoration: none;
   padding: 30px;
-  color: aliceblue;
-  
+  color:black;
+  border-bottom: 8px solid #ccc100;
+  font-weight:bold;
+}
+.chatbtn:hover {
+  margin-top: 3px;
+  background-color: gold;
+  border-bottom: 2px solid #ccc100;
 }
 // メインビューの右部分
 .main-contents-right{
@@ -172,7 +178,7 @@ footer {
     background-color: gold;
     text-decoration: none;
     padding: 10px;
-    color: aliceblue;
+    color: black;
   }
 }
 
@@ -220,7 +226,6 @@ footer {
     background-color: gold;
     text-decoration: none;
     padding: 2px;
-    color: aliceblue;
-    
+    color: black;
   }
 }
