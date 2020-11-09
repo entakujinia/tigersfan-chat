@@ -10,7 +10,7 @@ class User < ApplicationRecord
 
   has_many :room_users, dependent: :destroy
   has_many :rooms, through: :room_users, dependent: :destroy
-  # has_many :messages
+  has_many :messages
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :fan_history
