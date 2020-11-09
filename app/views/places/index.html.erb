@@ -1,10 +1,19 @@
-<%= render "shared/header" %> 
-  <div class="top-contents">
-    
+
+<%= render "shared/header" %>
+ <div class="main"> 
+  <div class="main-contents-left"> 
+   <div class="images">     
+     <%= link_to image_tag("スクリーンショット1.png", class:"image"), "#" %>  
+     <%= link_to image_tag("スクリーンショット2.png", class:"image"), "#" %> 
+   </div>
+    <div class="main-content-right-lower">
+     <% if user_signed_in? %>  
+      <%= link_to "チャットを始めよう!",  messages_new_path, method: :get, class:"btn" %>
+     <% end %>
+    </div>
   </div>
-  <div class="bottom-contents">
-    <% if user_signed_in? %>  
-   <%= link_to "チャットを始めよう!",  messages_new_path, method: :get, class:"btn" %>
-   <% end %>
-  </div>
+  <div class="main-contents-right"></div>
+ </div>
 <%= render "shared/footer" %> 
+
+

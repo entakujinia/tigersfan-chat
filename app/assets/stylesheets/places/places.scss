@@ -39,8 +39,9 @@ header {
 }
 
 .header-title > a {
-  color: yellow;
+  color: gold;
   transition-duration: 1s;
+  text-decoration: none;
 }
 
 .header-title > a:hover {
@@ -82,20 +83,46 @@ header {
   top:100%;
   position: relative;
   display: inline-block;
+  text-decoration: none;
 }
 
 .br {
   display:none;
 }
 
-.top-contents {
-  padding: 150px;
-  background-color: yellowgreen;
+.main {
+  height: calc(100%-250px);
+  display:flex;
 }
 
-// メインビューのした部分
-.bottom-contents {
-  padding: 171px;
+//メインビューの左部分
+.main-contents-left {
+  height: 600px;
+  width:55%;
+  background-color: gold;
+  position: relative;
+
+}
+.images {
+  display: flex;
+}
+.image {
+  object-fit: cover;
+  width: 419px;
+  height: 419px;
+}
+
+.main-content-right-lower {
+  
+} 
+.main-content-right-lower .btn {
+
+}
+
+
+// メインビューの右部分
+.main-contents-right{
+  width: 45%;
   background-color:wheat;
   
 }
