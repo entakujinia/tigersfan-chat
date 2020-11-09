@@ -167,6 +167,13 @@ footer {
   .br {
     display:inline;
   }
+  .image {
+    width: 350px;
+    height: 220px;
+  }
+  .images {
+    display: block;
+  }
 }
 
 @media (max-width: 599px) {
@@ -192,5 +199,12 @@ footer {
   }
   .br {
     display:inline;
+  }
+  .images {
+    display: block;
+  }
+  .image {
+    height: 200px;
+    width: 250px;
   }
 }
