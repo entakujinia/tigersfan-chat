@@ -93,11 +93,21 @@ header {
   background-color: yellowgreen;
 }
 
+// メインビューのした部分
 .bottom-contents {
   padding: 171px;
-  background-color:yellow;
+  background-color:wheat;
+  
 }
 
+.bottom-contents .btn {
+ padding: 20px;
+ font-size: 20px;
+ 
+}
+
+
+// フッター部分について
 footer {
   height: 100px;
   background-color: black;

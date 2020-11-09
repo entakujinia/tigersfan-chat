@@ -1,10 +1,10 @@
 <%= render "shared/header" %> 
   <div class="top-contents">
-    Main
+    
   </div>
   <div class="bottom-contents">
     <% if user_signed_in? %>  
-   <%= link_to "チャットを始めよう",  messages_new_path, method: :get %>
+   <%= link_to "チャットを始めよう!",  messages_new_path, method: :get, class:"btn" %>
    <% end %>
   </div>
 <%= render "shared/footer" %> 
