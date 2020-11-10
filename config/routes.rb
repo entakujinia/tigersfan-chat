@@ -8,9 +8,9 @@ Rails.application.routes.draw do
   end
 
   root to: "places#index"
-  get 'messages/new'
+  get 'rooms/index'
   resources :users, only: [:edit, :update, :destroy]
-  resources :rooms, only: [:new, :create]  do
+  resources :rooms, only: [:index, :new, :create]  do
    resources :messages, only: [:index, :create]
   end
 end 
