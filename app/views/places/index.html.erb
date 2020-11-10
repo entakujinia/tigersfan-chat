@@ -1,4 +1,3 @@
-
 <%= render "shared/header" %>
  <div class="main"> 
   <div class="main-contents-left"> 
@@ -9,6 +8,7 @@
    <div class="main-content-left-lower">
      <% if user_signed_in? %>  
       <%= link_to "チャットを始めよう!", rooms_path, method: :get, class:"chatbtn" %>
+      <%= link_to "試合の感想を呟こう!", memos_path, method: :get, class:"chatbtn" %>
      <% end %>
    </div>
   </div>  
