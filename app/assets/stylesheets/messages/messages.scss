@@ -173,6 +173,9 @@
 .hidden {
   display: none;
 }
+.field_with_errors {
+  display: contents;
+}
 
 @media (max-width: 1024px) {
   .wrapper {
