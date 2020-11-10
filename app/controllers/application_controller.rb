@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   def check_guest
     email = resource.email
-    redirect_to root_path, alert: 'ゲストユーザーの変更・削除は不可です。' if email == 'guestuser@example.com'
+    redirect_to root_path, alert: 'ゲストユーザーの変更・削除は不可です。' if email == 'guestlogin@example.com'
   end
 
   private

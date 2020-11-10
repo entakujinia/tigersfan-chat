@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    redirect_to root_path, alert: 'ゲストユーザーは編集・削除できません。' and return if current_user.email == 'guestuser@example.com'
+    redirect_to root_path, alert: 'ゲストユーザーは編集・削除できません。' and return if current_user.email == 'guestlogin@example.com'
     
     if current_user.update(user_params)
       redirect_to root_path
