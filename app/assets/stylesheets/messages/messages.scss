@@ -33,17 +33,17 @@
 }
 
 .create-room a {
-  border: 1px solid red;
+  letter-spacing: 2px;
+  border: 1px solid gold;
   padding: 14px;
   color: black;
   text-decoration: none;
   font-weight:bold;
-  background-color: red;
+  background-color: gold;
+  border-bottom: 8px solid #ccc100;
 }
-.create-room a:hover {
-  margin-top: 3px;
-  background-color: red;
-}
+
+
 .rooms {
   background-color: gold;
   height: calc(100vh - 100px);
@@ -85,13 +85,14 @@
 
 .header-button a {
   text-decoration: none;
-  border: 1px solid red;
+  border: 1px solid gold;
   color: black;
   padding: 20px;
-  background-color: red;
+  background-color: gold;
   font-weight:bold;
- 
+  border-bottom: 2px solid #ccc100;
 }
+
 
 .messages {
   background-color: #FAFAFA;
