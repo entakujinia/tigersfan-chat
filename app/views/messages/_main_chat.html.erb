@@ -6,7 +6,8 @@
   </div>
   <div class="right-header">
     <div class="header-button">
-        <%= link_to "チャットを終了する", root_path, method: :delete %>
+        <%= link_to "チャットを終了する", root_path, data: {confirm: "退室してもメッセージはそのまま残すことができます\n本当に退室してもよろしいですか？"}%>
+        
     </div>
   </div>
 </div>
