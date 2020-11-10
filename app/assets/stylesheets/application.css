@@ -41,8 +41,9 @@ body {
   padding: 15px 0;
   margin-bottom:20px;
   cursor:pointer;
-  color:#FFF;
+  color:white;
   text-decoration-color: gold;
+  font-weight:bold;
 }
 
 
