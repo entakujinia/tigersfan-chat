@@ -3,6 +3,7 @@
  <div class= "post-title">
  <h1>タイガース情報をリアルタイムで共有しよう！</h1>
  </div>
+ <div class="post-contens-main">
   <div class="post-contents">
   <%= form_with url: "/posts", method: :post,id: "form" do |form| %>
    <div class="post-contents-field">
@@ -32,4 +33,6 @@
     </div>
   </div>
 <% end %>
+
+</div>
 <%= render "shared/footer" %> 

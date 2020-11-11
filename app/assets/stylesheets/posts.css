@@ -1,5 +1,7 @@
 .main-post {
-  overflow:scroll;
+  background-image: url("スクリーンショット1.png");
+  background-size: 100%;
+  width: 100%;
 }
 .post-title {
   color: goldenrod;
@@ -29,6 +31,9 @@
   bottom: 0;
   color: rgb(219, 218, 213);
 }
+.post-contens-main{
+  overflow: scroll;
+}
 .post-contents-field >input {
   width: 100%;
   letter-spacing: 1px;
@@ -54,19 +59,23 @@
 }
 
 .post {
-  border: 1px solid;
+  margin-left: 10%;
   width: 40%;
   margin-top: 30px;
   font-weight:bold;
   width: 100%;
 }
 .post-date {
-  color: red;
+  color: white;
   font-size: 10px;
 }
 .post-content {
   font-size: 15px;
+  color: white;
 }
 div[data-check="true"] {
   background: goldenrod;
+}
+
+@media (max-width: 1024px) {
 }
