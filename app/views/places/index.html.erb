@@ -1,17 +1,26 @@
 <%= render "shared/header" %>
  <div class="main"> 
   <div class="main-contents-left"> 
-   <div class="images">     
-     <%= link_to image_tag("スクリーンショット1.png", class:"image"), "#" %>  
-     <%= link_to image_tag("スクリーンショット2.png", class:"image"), "#" %> 
+   <div class="main-content-left-upper">
+      <div class="upper-explain-title">ファン同士の交流をもっと盛んに</div>
+       <div class="upper-contents">
+       <div class="explain-content">自然にファン同士が繋がれ意見を交換しあえます</div>
+       <div class="explain-content">ファンが集まる場所を見つけよう</div>
+       <div class="explain-content">最新のタイガース情報を共有しよう</div>
+       </div>
+       <% if user_signed_in? %>
+        <%= link_to "みんなの呟きを見に行こう", posts_path, method: :get, class:"chatbtn" %>
+        <% end %>
+   </div>
+   <div class="main-content-left-middle ">
    </div>
    <div class="main-content-left-lower">
-     <% if user_signed_in? %>  
+     <% if user_signed_in? %> 
+      <div class="lower-explain-title">チャットで新たなファン仲間をみつけよう</div> 
       <%= link_to "チャットを始めよう", rooms_path, method: :get, class:"chatbtn" %>
-      <%= link_to "みんなの呟き", posts_path, method: :get, class:"chatbtn" %>
      <% end %>
-   </div>
-  </div>  
+     </div>
+   </div>  
   <div class="main-contents-right"></div>
  </div>
 <%= render "shared/footer" %> 
