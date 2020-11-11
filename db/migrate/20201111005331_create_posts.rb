@@ -1,6 +1,6 @@
-class CreateMemos < ActiveRecord::Migration[6.0]
+class CreatePosts < ActiveRecord::Migration[6.0]
   def change
-    create_table :memos do |t|
+    create_table :posts do |t|
       t.text :content
       t.boolean :checked
       t.timestamps
