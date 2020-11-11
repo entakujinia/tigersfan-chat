@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index
     @posts = Post.all.order(id: 'DESC')
+    @user = User.all
   end
 
   def create
