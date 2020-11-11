@@ -1,4 +1,4 @@
 FactoryBot.define do
-  factory :memo do
+  factory :post do
   end
 end

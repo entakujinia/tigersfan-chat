@@ -1,0 +1,16 @@
+.post {
+  border: 1px solid;
+  width: 40%;
+  margin-top: 30px;
+  font-weight:bold;
+}
+.post-date {
+  color: red;
+  font-size: 10px;
+}
+.post-content {
+  font-size: 15px;
+}
+div[data-check="true"] {
+  background: goldenrod;
+}

@@ -13,5 +13,7 @@ Rails.application.routes.draw do
   resources :rooms, only: [:index, :new, :create]  do
    resources :messages, only: [:index, :create]
   end
-  resources :memos, only: [:index, :create]
+
+  get 'posts/:id', to: 'posts#checked'
+  resources :posts, only: [:index, :create]
 end 
