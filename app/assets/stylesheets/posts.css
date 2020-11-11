@@ -1,16 +1,81 @@
+.main-post {
+  background-image: url("スクリーンショット1.png");
+  background-size: 100%;
+  width: 100%;
+}
+.post-title {
+  color: goldenrod;
+  position: relative;
+  padding: 8px 15px;
+  margin-left: 40px;
+  background: rgb(219, 218, 213);
+  border-radius: 20px;
+}
+.post-title:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f111";
+  font-weight: 900;
+  position: absolute;
+  font-size: 15px;
+  left: -40px;
+  bottom: 0;
+  color: rgb(219, 218, 213);
+}
+.post-title:after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f111";
+  font-weight: 900;
+  position: absolute;
+  font-size: 23px;
+  left: -23px;
+  bottom: 0;
+  color: rgb(219, 218, 213);
+}
+.post-contens-main{
+  overflow: scroll;
+}
+.post-contents-field >input {
+  width: 100%;
+  letter-spacing: 1px;
+  padding: 10px;
+  border-width :3px;
+  border-color: black;
+  margin-top: 10px;
+}
+.post-contents-submit >input {
+  letter-spacing: 10px;
+  justify-content: space-around;
+  background-color: gold;
+  text-decoration: none;
+  padding: 20px;
+  color: black;
+  border-bottom: 8px solid #ccc100;
+  font-weight: bold;
+}
+.post-contents-submit >input:hover {
+  margin-top: 3px;
+  background-color: gold;
+  border-bottom: 2px solid #ccc100;
+}
+
 .post {
-  border: 1px solid;
+  margin-left: 10%;
   width: 40%;
   margin-top: 30px;
   font-weight:bold;
+  width: 100%;
 }
 .post-date {
-  color: red;
+  color: white;
   font-size: 10px;
 }
 .post-content {
   font-size: 15px;
+  color: white;
 }
 div[data-check="true"] {
   background: goldenrod;
+}
+
+@media (max-width: 1024px) {
 }

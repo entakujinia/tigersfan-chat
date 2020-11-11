@@ -15,5 +15,5 @@ Rails.application.routes.draw do
   end
 
   get 'posts/:id', to: 'posts#checked'
-  resources :posts, only: [:index, :create]
+  resources :posts, only: [:index, :create, :destroy]
 end 
