@@ -10,7 +10,7 @@ class PostsController < ApplicationController
 
   def checked
     post = Post.find(params[:id])
-    if memo.checked 
+    if post.checked 
       post.update(checked: false)
     else
       post.update(checked: true)
