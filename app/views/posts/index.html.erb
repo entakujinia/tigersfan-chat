@@ -13,6 +13,7 @@
   <div class="post" data-id=<%= post.id %> data-check=<%= post.checked %>>
     <div class="post-date">
       投稿日時：<%= post.created_at %>
+      <%= link_to '削除', post_path(post.id), method: :delete %>
     </div>
     <%# <div class="post-user">
       <%= user.nickname %>

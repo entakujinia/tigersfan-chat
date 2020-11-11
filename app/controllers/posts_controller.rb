@@ -9,6 +9,11 @@ class PostsController < ApplicationController
     render json: { post: post }
   end
 
+  def destroy
+    post = Post.find(params[:id])
+    post.destroy 
+  end
+
   def checked
     post = Post.find(params[:id])
     if post.checked

@@ -18,6 +18,7 @@ function memo() {
         <div class="post" data-id=${item.id}>
           <div class="post-date">
             投稿日時：${item.created_at}
+            <%= link_to '削除', post_path${item.id}, method: :delete %>
           </div>
           <div class="post-content">
           ${item.content}
