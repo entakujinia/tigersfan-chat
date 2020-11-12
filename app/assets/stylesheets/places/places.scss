@@ -94,6 +94,9 @@ header {
   height: calc(100%-250px);
   display:flex;
 }
+.notice {
+ background-color: khaki;
+}
 
 //メインビューの左部分
 // 上位部分
@@ -192,7 +195,8 @@ header {
   font-weight: bold;
   margin-top: 25px;
   margin-left: 10px;
-  background: linear-gradient(transparent 70%, red 70%);
+  background: linear-gradient(transparent 70%, gold 70%);
+  width: 600px;
 } 
 // フッター部分について
 footer {
