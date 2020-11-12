@@ -68,3 +68,4 @@ gem 'rails-i18n'
 group :production do
   gem 'rails_12factor'
 end
+gem 'dotenv-rails'
