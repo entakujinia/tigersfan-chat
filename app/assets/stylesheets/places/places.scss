@@ -101,7 +101,7 @@ header {
   height: 600px;
   width:55%;
   position: relative;
-  background-color:salmon;
+  background: linear-gradient(to top right, pink 40%, white 60%, );
   border: 1px solid #CCC;
 }
 .main-content-left-upper {
@@ -113,15 +113,15 @@ header {
 
 .upper-explain-title {
   padding-top:30px;
-  color: #FFFFFF;
+  color: black;
   font-family: "Poppins", Poppins;
   font-size: 30px;
   font-weight: bold;
-  border-bottom:1px solid #FFF;
+  border-bottom:1px solid black;
 }
 
 .explain-content {
-  color: #FFFFFF;
+  color: black;
   list-style:none;
   font-size: 20px;
 }
@@ -157,11 +157,11 @@ header {
   margin:0 auto;
 }
 .lower-explain-title {
-  color: #FFFFFF;
+  color: black;
   font-family: "Poppins", Poppins;
   font-size: 30px;
   font-weight: bold;
-  border-bottom:1px solid #FFF;
+  border-bottom:1px solid black;
   margin-bottom: 30px;
   
 }
@@ -183,13 +183,17 @@ header {
 // メインビューの右部分
 .main-contents-right{
   width: 45%;
-  background: linear-gradient(to top right, yellow 40%, white 60%, );
+  background: linear-gradient(to top right, white 40%, pink 60%, );
 }
-#map {
-  height: 400px;
-  width: 100%;
-  margin-top: 200px;
-}
+.main-contents-right-title {
+  color: black;
+  font-family: "Poppins", Poppins;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 25px;
+  margin-left: 10px;
+  background: linear-gradient(transparent 70%, red 70%);
+} 
 // フッター部分について
 footer {
   height: 100px;
