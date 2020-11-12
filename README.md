@@ -1,57 +1,47 @@
-# テーブル設計です
+# 阪神タイガースを応援しよう
+## 概要
+阪神タイガースファンが集まり交流の場を広げる手助けができるアプリケーションです。
 
-## users テーブル
+・日本全国から阪神ファンが集まる場所を探し、共有することができます。
+・リアルタイムチャットを利用して一緒に応援する新しい仲間を作ることもできます。
+・リアルタイムでメモを投稿しあい、情報や感想を共有できます。
+## App URL
+本番環境ではまだ見ることができません。もう少しお待ちいただくようよろしくお願いします。
+## テスト用アカウント
+ゲストログイン機能を実装しているのでそちらをクリックしていただくとログインすることができます。
+## 機能一覧
+ユーザー管理機能
+ゲストログイン機能
+練習場所管理機能
+リアルタイムツイート機能
+## 実装予定機能
+ActionCableを用いたリアルタイムチャット機能
+レスポンシブデザイン(スマホ・タブレット)
+トップページのMAPのピンをクリックすると詳細を非同期で表示
+トップページにMAPに登録された交流場所の一覧表示
+## 使用技術
+JavaScript
+Ruby 2.6.5
+Rails 6.0.0
+MySQL2
+Rubocop
+Rspec
+Google API ( Maps Javascript API / Geocoding API )
+Git / GitHub
+## 制作理由
+阪神タイガースファンがもっと交流を深められるようなアプリを制作したかったからです。
+私の趣味は野球観戦なのですが、
+私の周りでタイガースに詳しく熱く語り合えるような友人はいませんでした。
+日本全国に1000万人以上いると言われるタイガースファンが、簡単に同じ熱量を持ったユーザーに出会い、ユーザー同士で交流ができるようなアプリケーションを制作すれば良いと考えました！
 
-| Column            | Type         | Options                       
-| ----------------- | ------------ | ----------------------------- 
-| nickname          | string       | null: false                   
-| email             | string       | null: false                   
-| password          | string       | null: false                   
-| encrypted_password| string       | null: false                   
-| fan_history       | string       | null: false                   
-| favorite_player   | string       | null: false                   
+ターゲットはもちろん阪神タイガースのファンですがその中でも、
+ファンになって歴史が長い人、ファンになりたての人でも、
+気軽な交流によってタイガースのことをもっとを知ることができたり
+阪神タイガースに関する情報収集、発信をすることができます。
 
-### Association
-
-- has_many :room_users
-- has_many :rooms, through: room_users
-- has_many :messages
-
-## rooms テーブル
-
-| Column | Type   | Options     |
-| ------ | ------ | ----------- |
-| name   | string | null: false |
-
-### Association
-
-- has_many :room_users
-- has_many :users, through: room_users
-- has_many :messages
-
-## room_users テーブル
-
-| Column | Type       | Options                        |
-| ------ | ---------- | ------------------------------ |
-| user   | references | null: false, foreign_key: true |
-| room   | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :room
-- belongs_to :user
-
-
-## messages テーブル
-
-| Column  | Type       | Options                        |
-| ------- | ---------- | ------------------------------ |
-| content | string     |                                |
-| user    | references | null: false, foreign_key: true |
-| room    | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :room
-- belongs_to :user
-
+これにより知り合った方達と野球観戦や交流の場で実際に友人となることができれば、本望です。
+## データベース設計
+追記予定があるためもう少しお待ちいただくようよろしくお願いします。
+## 工夫ポイント
+ひと目見るだけで使い方がわかるようにシンプルにしました。
+また、ユーザー同士が繋がりをもちやすいようにわかりやすい機能を複数実装しました。
