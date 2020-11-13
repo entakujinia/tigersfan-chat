@@ -93,6 +93,7 @@ header {
 .main {
   height: calc(100%-250px);
   display:flex;
+  background: linear-gradient(to top right, white 40%, gold 60%, );
 }
 .notice {
  background-color: khaki;
@@ -104,8 +105,6 @@ header {
   height: 600px;
   width:55%;
   position: relative;
-  background: linear-gradient(to top right, pink 40%, white 60%, );
-  border: 1px solid #CCC;
 }
 .main-content-left-upper {
   width:85%;
@@ -121,6 +120,7 @@ header {
   font-size: 30px;
   font-weight: bold;
   border-bottom:1px solid black;
+  width: 480px;
 }
 
 .explain-content {
@@ -166,7 +166,7 @@ header {
   font-weight: bold;
   border-bottom:1px solid black;
   margin-bottom: 30px;
-  
+  width: 600px;
 }
 .main-content-left-lower .chatbtn {
   letter-spacing: 10px;
@@ -186,7 +186,6 @@ header {
 // メインビューの右部分
 .main-contents-right{
   width: 45%;
-  background: linear-gradient(to top right, white 40%, pink 60%, );
 }
 .main-contents-right-title {
   color: black;
@@ -194,9 +193,9 @@ header {
   font-size: 30px;
   font-weight: bold;
   margin-top: 25px;
-  margin-left: 10px;
-  background: linear-gradient(transparent 70%, gold 70%);
-  width: 600px;
+  margin-left: 100px;
+  background: linear-gradient(transparent 70%, red 70%);
+  width: 550px;
 } 
 // フッター部分について
 footer {
