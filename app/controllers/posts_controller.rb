@@ -6,8 +6,6 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(content: params[:content])
-    if @post.save
-      ActionCable.server.broadcast 'post_channel', content: @post
-    end
+    ActionCable.server.broadcast 'post_channel', content: @post if @post.save
   end
 end
