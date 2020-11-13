@@ -6,7 +6,7 @@
   <div class="post-contents">
    <%= form_with model: @message do |f| %>
    <div class="post-contents-field">
-    <%= f.text_field :content , placeholder: '気軽に呟いてください!'%>
+    <%= f.text_field :content , placeholder: '気軽に呟いてください!  (投稿は消すことができないため不適切な投稿はやめてください)'%>
    </div>
      <div class="post-contents-submit">
       <%= f.submit '投稿する' %>
