@@ -1,11 +1,11 @@
 class PostsController < ApplicationController
-  def index
+   def index
     @posts = Post.all
     @post = Post.new
-  end
+   end
 
-  def create
+   def create
     @post = Post.new(content: params[:content])
     ActionCable.server.broadcast 'post_channel', content: @post if @post.save
-  end
+   end
 end
