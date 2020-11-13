@@ -1,38 +1,23 @@
-<%= render "shared/header" %>
 <div class= "main-post">
  <div class= "post-title">
- <h1>タイガース情報をリアルタイムで共有しよう！</h1>
+   <%= link_to "阪神タイガースを応援しよう！", root_path, method: :get %>
  </div>
  <div class="post-contens-main">
   <div class="post-contents">
-  <%= form_with url: "/posts", method: :post,id: "form" do |form| %>
+   <%= form_with model: @message do |f| %>
    <div class="post-contents-field">
-    <%= form.text_field :content , id: "content" , placeholder: '気軽に呟いてください!'%>
+    <%= f.text_field :content , placeholder: '気軽に呟いてください!'%>
    </div>
-   <div class="post-contents-submit">
-   <%= form.submit '投稿する' , id: "submit" %>
+     <div class="post-contents-submit">
+      <%= f.submit '投稿する' %>
+     </div>
   </div>
-</div>
   <% end %>
 
-
-<div id="list">
-</div>
-
-<% @posts.zip(@user).each do |post, user| %>
-  <div class="post" data-id=<%= post.id %> data-check=<%= post.checked %>>
-    <div class="post-date">
-      投稿日時：<%= post.created_at %>
-       <%= link_to '削除', "/posts/#{post.id}", method: :delete ,id: "delete" %>
-    </div>
-    <%# <div class="post-user">
-      <%= user.nickname %>
-    <%# </div>  %>
-    <div class="post-content">
-      <%= post.content %>
-    </div>
+  <div id='posts'>
+   <% @posts.reverse_each do |post| %>
+    <p><%= post.content %></p>
+   <% end %>
   </div>
-<% end %>
-
 </div>
 <%= render "shared/footer" %> 

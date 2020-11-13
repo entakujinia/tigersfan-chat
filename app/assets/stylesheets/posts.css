@@ -10,6 +10,7 @@
   margin-left: 40px;
   background: rgb(219, 218, 213);
   border-radius: 20px;
+  margin-bottom: 30px;
 }
 .post-title:before {
   font-family: "Font Awesome 5 Free";
@@ -30,6 +31,12 @@
   left: -23px;
   bottom: 0;
   color: rgb(219, 218, 213);
+}
+.post-title >a {
+  font-size: 40px;
+  color: rgb(145, 129, 53);
+  text-decoration: gold;
+  font-weight: bold;
 }
 .post-contens-main{
   overflow: scroll;
@@ -57,7 +64,6 @@
   background-color: gold;
   border-bottom: 2px solid #ccc100;
 }
-
 .post {
   margin-left: 10%;
   width: 40%;
@@ -73,8 +79,11 @@
   font-size: 15px;
   color: white;
 }
-div[data-check="true"] {
-  background: goldenrod;
+p {
+  color: aliceblue;
+  font-size: 25px;
+  margin-top: 10px;
+  margin-left: 20px;
 }
 
 @media (max-width: 1024px) {
