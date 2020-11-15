@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: tigersfan_chat_production
-  username: tigersfan_chat
-  password: <%= ENV['TIGERSFAN_CHAT_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
