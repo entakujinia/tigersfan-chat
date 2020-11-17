@@ -13,7 +13,6 @@ ja:
         nickname: ニックネーム
         fan_history_id: ファン歴
         favorite_player_id: 好きな選手
-
   date:
     abbr_day_names:
     - 日
