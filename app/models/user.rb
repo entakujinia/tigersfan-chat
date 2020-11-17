@@ -9,8 +9,8 @@ class User < ApplicationRecord
   validates :favorite_player, presence: true
 
   has_many :room_users
-  has_many :rooms, through: :room_users, dependent: :destroy
-  has_many :messages, dependent: :destroy
+  has_many :rooms, through: :room_users
+  has_many :messages
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :fan_history
