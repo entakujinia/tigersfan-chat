@@ -14,7 +14,7 @@ describe User do
     it 'nicknameがない場合は登録できないこと' do
       @user.nickname = ''
       @user.valid?
-      expect(@user.errors.full_messages).to include('Nicknameを入力してください')
+      expect(@user.errors.full_messages).to include("ニックネームを入力してください")
     end
 
     it 'emailがない場合は登録できないこと' do
@@ -45,15 +45,14 @@ describe User do
       @user.password = '111111'
       @user.password_confirmation = '111111'
       @user.valid?
-      expect(@user.errors[:password]).to include
+      expect(@user.errors[:password]).to include("は不正な値です")
     end
 
     it 'passwordは半角英字のみでは登録できないこと' do
       @user.password = 'aaaaaa'
       @user.password_confirmation = 'aaaaaa'
       @user.valid?
-
-      expect(@user.errors[:password]).to include
+      expect(@user.errors[:password]).to include("は不正な値です")
     end
 
     it 'passwordが5文字以下であれば登録できないこと' do
@@ -68,7 +67,7 @@ describe User do
       another_user = FactoryBot.build(:user)
       another_user.email = @user.email
       another_user.valid?
-      expect(another_user.errors.full_messages).to include
+      expect(another_user.errors.full_messages).to include("Eメールはすでに存在します")
     end
 
     it 'fan_history_idが1の場合登録できないこと' do
