@@ -42,4 +42,29 @@ RSpec.describe 'Users', type: :system do
      end
     end
   end
+
+  describe 'ユーザーログイン' do
+    before do
+      @user = FactoryBot.create(:user)
+    end
+
+    context 'ログインができるとき' do
+      it '保存されているユーザーの情報と合致すればログインができる' do
+        visit new_user_session_path
+        fill_in 'user_email', with: @user.email
+          fill_in 'user_password', with: @user.password
+        find('input[name="commit"]').click  
+        expect(current_path).to eq root_path
+     end
+    end
+    context 'ログインができないとき' do
+     it '保存されているユーザーの情報と合致しないとログインができない' do
+      visit new_user_session_path
+      fill_in 'user_email', with: ''
+      fill_in 'user_password', with: ''
+      find('input[name="commit"]').click
+      expect(current_path).to eq new_user_session_path
+     end
+    end
+  end
 end
