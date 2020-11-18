@@ -22,7 +22,7 @@ RSpec.describe 'メッセージ投稿機能', type: :system do
       sign_in(@room_user.user)
       visit rooms_path
       click_on(@room_user.room.name)
-      post = 'テスト'
+      post = '確認'
       fill_in 'message_content', with: post
       expect do
         find('input[name="commit"]').click
