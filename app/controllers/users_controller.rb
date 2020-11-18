@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!, only: [:edit, :update]
+  
   def edit
     @user = User.all
   end
