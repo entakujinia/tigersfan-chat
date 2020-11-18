@@ -20,7 +20,9 @@ class User < ApplicationRecord
 
   def self.guest
     find_or_create_by!(nickname: '篠谷拓', email: 'guestlogin@example.com') do |user|
-      user.password = SecureRandom.urlsafe_base64
+      user.password = Faker::Internet.password(min_length: 6)
+      user.fan_history_id = 2
+      user.favorite_player_id = 2
     end
   end
 end
